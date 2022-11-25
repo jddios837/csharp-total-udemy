@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day16-Blazor", "Day16-Blazor\Day16-Blazor.csproj", "{27FCFB67-42EC-416E-B001-6405228B7572}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day16-Avalonia", "Day16-Avalonia\Day16-Avalonia.csproj", "{FE66BD96-A706-4F92-9694-22679AB3F607}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27FCFB67-42EC-416E-B001-6405228B7572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27FCFB67-42EC-416E-B001-6405228B7572}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27FCFB67-42EC-416E-B001-6405228B7572}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27FCFB67-42EC-416E-B001-6405228B7572}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE66BD96-A706-4F92-9694-22679AB3F607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE66BD96-A706-4F92-9694-22679AB3F607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE66BD96-A706-4F92-9694-22679AB3F607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE66BD96-A706-4F92-9694-22679AB3F607}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

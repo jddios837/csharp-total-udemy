@@ -1,0 +1,24 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Day15.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Day15">
+
+    <!-- <Design.DataContext> -->
+    <!--     <vm:MainWindowViewModel/> -->
+    <!-- </Design.DataContext> -->
+
+    <!-- <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/> -->
+
+    <StackPanel>
+        <Label Content="Numero 1"/>
+        <TextBox Width="100" Height="30" Text="{Binding Path=Num1, Mode=TwoWay}"/>
+        <Label Content="Numero 2"/>
+        <TextBox Width="100" Height="30" Text="{Binding Path=Num2, Mode=TwoWay}"/>
+        <Label Content="Resultado"/>
+        <TextBox Width="100" Height="30" Text="{Binding Path=Resultado, Mode=TwoWay}"/>
+    </StackPanel>
+</Window>

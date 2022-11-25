@@ -1,0 +1,29 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Day15_RadioButton.MainWindow"
+        Title="Day15_RadioButton">
+    <StackPanel>
+        <Label FontSize="20">¿Tu me quieres?</Label>
+        <RadioButton Margin="5" VerticalContentAlignment="Center">
+            <WrapPanel>
+                <Rectangle Fill="Green" Width="16" Height="16"></Rectangle>
+                <TextBlock Text="Si" Foreground="Green" FontSize="20" Margin="5 0 0 0"></TextBlock>
+            </WrapPanel>
+        </RadioButton>
+        <RadioButton Margin="5" VerticalContentAlignment="Center">
+            <WrapPanel>
+                <Rectangle Fill="Red" Width="16" Height="16"></Rectangle>
+                <TextBlock Text="No" Foreground="Red" FontSize="20" Margin="5 0 0 0"></TextBlock>
+            </WrapPanel>
+        </RadioButton>
+        <RadioButton Margin="5" VerticalContentAlignment="Center">
+            <WrapPanel>
+                <Rectangle Fill="Blue" Width="16" Height="16"></Rectangle>
+                <TextBlock Text="No" Foreground="Blue" FontSize="20" Margin="5 0 0 0"></TextBlock>
+            </WrapPanel>
+        </RadioButton>
+    </StackPanel>
+</Window>

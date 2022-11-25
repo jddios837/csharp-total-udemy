@@ -1,0 +1,26 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Day15_CheckBox.MainWindow"
+        Title="Day15_CheckBox">
+        <StackPanel>
+                <Label FontWeight="Bold" Foreground="Blue">Agrega Ingredientes a tu Pizza!</Label>
+                <CheckBox 
+                        Name="cbTodos" 
+                        IsThreeState="True" 
+                        Content="Todos" 
+                        Checked="cbTodoHaCambiado" 
+                        Unchecked="cbTodoHaCambiado"/>
+                <StackPanel Margin="20">
+                        <CheckBox Name="cbChile" Checked="cbSimpleHaCambiado" Unchecked="cbSimpleHaCambiado">
+                                <TextBlock>
+                                        Chile Picante
+                                </TextBlock>
+                        </CheckBox>
+                        <CheckBox Name="cbHongos" Checked="cbSimpleHaCambiado" Unchecked="cbSimpleHaCambiado">Hongos</CheckBox>
+                        <CheckBox Name="cbMozzarela" Checked="cbSimpleHaCambiado" Unchecked="cbSimpleHaCambiado">Mozzarela</CheckBox>
+                </StackPanel>
+        </StackPanel>
+</Window>

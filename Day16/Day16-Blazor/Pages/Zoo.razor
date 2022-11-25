@@ -1,0 +1,39 @@
+@page "/Zoo"
+@using Day16_Blazor.Data
+@inject ZooDbContext dbContext;
+
+<h3 class="test">List of Zoos Test</h3>
+
+@if (zoos == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var z in zoos)
+        {
+            <tr>
+                <td>@z.Ubicacion</td>
+                <td>Options</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Day16_Blazor.Data.Zoo>? zoos;
+
+    protected override async Task OnInitializedAsync()
+    {
+        zoos = dbContext.Zoos.ToList();
+    }
+}

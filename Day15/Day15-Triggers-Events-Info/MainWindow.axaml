@@ -1,0 +1,18 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Day15_Triggers_Events_Info.MainWindow"
+        Title="Day15_Triggers_Events_Info">
+    <StackPanel>
+        <Grid>
+            <TextBlock 
+                Text="Hola Mundo" 
+                FontSize="32" 
+                HorizontalAlignment="Center">
+            </TextBlock>
+        </Grid>
+        
+    </StackPanel>
+</Window>
