@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day18-Console-LINQ", "Day18-Console-LINQ\Day18-Console-LINQ.csproj", "{6A242AFB-00CF-4A18-8716-BB5FACB3B259}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day18-Linq-Objects-Operators", "Day18-Linq-Objects-Operators\Day18-Linq-Objects-Operators.csproj", "{E413A9FB-E808-4482-BDBF-518F86916B25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day18-LINQ-XAML", "Day18-LINQ-XAML\Day18-LINQ-XAML.csproj", "{769DF958-CDD5-4194-9353-70870C1A0EBF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A242AFB-00CF-4A18-8716-BB5FACB3B259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A242AFB-00CF-4A18-8716-BB5FACB3B259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A242AFB-00CF-4A18-8716-BB5FACB3B259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A242AFB-00CF-4A18-8716-BB5FACB3B259}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E413A9FB-E808-4482-BDBF-518F86916B25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E413A9FB-E808-4482-BDBF-518F86916B25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E413A9FB-E808-4482-BDBF-518F86916B25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E413A9FB-E808-4482-BDBF-518F86916B25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{769DF958-CDD5-4194-9353-70870C1A0EBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{769DF958-CDD5-4194-9353-70870C1A0EBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{769DF958-CDD5-4194-9353-70870C1A0EBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{769DF958-CDD5-4194-9353-70870C1A0EBF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
