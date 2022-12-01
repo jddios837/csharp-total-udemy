@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day20-Threads", "Day20-Threads\Day20-Threads.csproj", "{1BA8567B-C073-4F98-A075-604BC95005F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day20-Threads-JoinIsAlive", "Day20-Threads-JoinIsAlive\Day20-Threads-JoinIsAlive.csproj", "{9792F312-EB3A-454E-8789-1D34DE0DDEC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BA8567B-C073-4F98-A075-604BC95005F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BA8567B-C073-4F98-A075-604BC95005F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BA8567B-C073-4F98-A075-604BC95005F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BA8567B-C073-4F98-A075-604BC95005F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9792F312-EB3A-454E-8789-1D34DE0DDEC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9792F312-EB3A-454E-8789-1D34DE0DDEC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9792F312-EB3A-454E-8789-1D34DE0DDEC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9792F312-EB3A-454E-8789-1D34DE0DDEC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

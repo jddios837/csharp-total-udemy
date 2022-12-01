@@ -1,0 +1,57 @@
+﻿@page "/fetchdata"
+
+<PageTitle>Weather forecast</PageTitle>
+
+@using Day19_LINQ_SQL.Data
+@using Microsoft.EntityFrameworkCore
+@inject WeatherForecastService ForecastService
+@inject UniversityDbContext _dbContext
+
+@* <button class="btn btn-primary" >Add a New University</button> *@
+<NavLink class="btn btn-primary" href="university/new">Add a New University</NavLink>
+<h1>List of Universities</h1>
+
+@* <p>This component demonstrates fetching data from a service.</p> *@
+
+@if (universities == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Options</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var u in universities)
+        {
+            <tr>
+                <td>@u.Id</td>
+                <td>@u.Name</td>
+                <td>Options</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@code {
+    // private WeatherForecast[]? forecasts;
+    private Data.Models.University[]? universities;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+        universities = await _dbContext.University.ToArrayAsync();
+        // _dbContext.University.Add(new University { Name = "DDU" });
+        // await _dbContext.SaveChangesAsync();
+    }
+
+}

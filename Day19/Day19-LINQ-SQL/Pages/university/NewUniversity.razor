@@ -1,0 +1,23 @@
+@page "/university/new"
+@using Day19_LINQ_SQL.Data.DTOs
+@using Microsoft.Extensions.Logging
+@inject ILogger<>
+
+<PageTitle>New University</PageTitle>
+
+<h3>New University</h3>
+
+<NavLink class="btn btn-secondary" href="fetchdata">
+    Back
+</NavLink>
+
+
+
+@code {
+    private UniversityDto uModel = new();
+
+    private void HandleValidSubmit()
+    {
+        
+    }
+}
