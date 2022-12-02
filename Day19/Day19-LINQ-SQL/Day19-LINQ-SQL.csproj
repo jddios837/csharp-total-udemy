@@ -15,4 +15,8 @@
       </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <AdditionalFiles Include="Pages\university\UniversityList.razor" />
+    </ItemGroup>
+
 </Project>

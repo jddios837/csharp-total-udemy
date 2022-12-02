@@ -1,11 +1,12 @@
-﻿@page "/fetchdata"
+﻿@page "/university"
 
-<PageTitle>Weather forecast</PageTitle>
+<PageTitle>List of Universities</PageTitle>
 
 @using Day19_LINQ_SQL.Data
+@using Day19_LINQ_SQL.Data.Models
 @using Microsoft.EntityFrameworkCore
-@inject WeatherForecastService ForecastService
-@inject UniversityDbContext _dbContext
+@inject NavigationManager Navigation
+@inject UniversityDbContext DbContext
 
 @* <button class="btn btn-primary" >Add a New University</button> *@
 <NavLink class="btn btn-primary" href="university/new">Add a New University</NavLink>
@@ -13,7 +14,7 @@
 
 @* <p>This component demonstrates fetching data from a service.</p> *@
 
-@if (universities == null)
+@if (_universities == null)
 {
     <p>
         <em>Loading...</em>
@@ -30,12 +31,18 @@ else
         </tr>
         </thead>
         <tbody>
-        @foreach (var u in universities)
+        @foreach (var u in _universities)
         {
             <tr>
                 <td>@u.Id</td>
                 <td>@u.Name</td>
-                <td>Options</td>
+                <td>
+                    <button 
+                        class="btn btn-secondary"
+                        @onclick="@(() => Navigation.NavigateTo($@"/university/edit/{u.Id}"))">
+                    Edit
+                    </button>
+                </td>
             </tr>
         }
         </tbody>
@@ -44,12 +51,12 @@ else
 
 @code {
     // private WeatherForecast[]? forecasts;
-    private Data.Models.University[]? universities;
+    private University[]? _universities;
 
     protected override async Task OnInitializedAsync()
     {
         // forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
-        universities = await _dbContext.University.ToArrayAsync();
+        _universities = await DbContext.University.ToArrayAsync();
         // _dbContext.University.Add(new University { Name = "DDU" });
         // await _dbContext.SaveChangesAsync();
     }

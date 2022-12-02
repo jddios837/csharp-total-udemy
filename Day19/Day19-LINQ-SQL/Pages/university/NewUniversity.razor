@@ -1,23 +1,44 @@
 @page "/university/new"
 @using Day19_LINQ_SQL.Data.DTOs
+@using Day19_LINQ_SQL.Data.Models
 @using Microsoft.Extensions.Logging
-@inject ILogger<>
+@using Day19_LINQ_SQL.Data
+@inject UniversityDbContext _dbContext
+@inject NavigationManager Navigation
+@inject ILogger<NewUniversity> Logger
+
 
 <PageTitle>New University</PageTitle>
 
 <h3>New University</h3>
 
-<NavLink class="btn btn-secondary" href="fetchdata">
+<NavLink class="btn btn-secondary" href="university">
     Back
 </NavLink>
 
-
+<EditForm Model="@uModel" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    
+    <InputText id="name" @bind-Value="uModel.Name"></InputText>
+    
+    <button class="btn btn-primary" type="submit">Submit</button>
+</EditForm>
 
 @code {
     private UniversityDto uModel = new();
 
     private void HandleValidSubmit()
     {
+        Logger.LogInformation("HandleValidSubmit called!");
+        University? newUniversity = new University()
+        {
+            Name = uModel.Name
+        };
+
+        _dbContext.University.Add(newUniversity);
+        _dbContext.SaveChanges();
         
+        Navigation.NavigateTo("university");
     }
 }

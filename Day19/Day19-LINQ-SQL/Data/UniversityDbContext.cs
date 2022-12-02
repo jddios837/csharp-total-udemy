@@ -10,6 +10,6 @@ public class UniversityDbContext : DbContext
         
     }
     
-    public DbSet<University> University { get; set; }
+    public DbSet<University?> University { get; set; }
     
 }

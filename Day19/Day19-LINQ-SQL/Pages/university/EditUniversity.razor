@@ -1,5 +1,30 @@
-<h3>EditUniversity</h3>
+@page "/university/edit/{Id:int}"
+
+<PageTitle>Edit University</PageTitle>
+
+@using Day19_LINQ_SQL.Data.Models
+@using Day19_LINQ_SQL.Data
+@using Microsoft.EntityFrameworkCore
+@inject UniversityDbContext _dbContext
+
+<NavLink class="btn btn-secondary" href="university">
+    Back
+</NavLink>
+
+<h3>Edit University</h3>
+
+<p>@_u.Name</p>
 
 @code {
-    
+    [Parameter]
+    public int Id { get; set; }
+
+    private University? _u;
+
+    protected override async Task OnInitializedAsync()
+    {
+        University? _u = await _dbContext
+            .University
+            .FirstOrDefaultAsync(e => e.Id == Id);
+    }
 }
