@@ -38,10 +38,12 @@ public class ControlColision : MonoBehaviour
         } else if (col.gameObject.name == "ParedIzquierda")
         {
             this.controlPuntaje.GolJugador1();
+            StartCoroutine(this.moveBall.IniciarPelota(false));
         } 
         else if (col.gameObject.name == "ParedDerecha")
         {
             this.controlPuntaje.GolJugador2();
+            StartCoroutine(this.moveBall.IniciarPelota(true));
         }
     }
 }

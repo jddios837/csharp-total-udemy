@@ -18,6 +18,8 @@ public class MoveBall : MonoBehaviour
 
     public IEnumerator IniciarPelota(bool comienzaJugador1 = true)
     {
+        this.PosicionPelota(comienzaJugador1);
+        
         this.contadorGolpe = 0;
 
         yield return new WaitForSeconds(2);
@@ -48,5 +50,12 @@ public class MoveBall : MonoBehaviour
             this.contadorGolpe++;
         }
     }
-    
+
+    void PosicionPelota(bool comienzaJugador1)
+    {
+        this.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        this.gameObject.transform.localPosition = comienzaJugador1 ? 
+            new Vector3(-100, 0, 0) : 
+            new Vector3(100, 0, 0);
+    }
 }
