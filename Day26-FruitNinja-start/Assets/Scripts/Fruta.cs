@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Fruta : MonoBehaviour
 {
@@ -19,16 +21,30 @@ public class Fruta : MonoBehaviour
             // r.AddExplosionForce(Random.Range((500f,1000f), transform.position, 5f));
         }
         
+        FindObjectOfType<GameManager>().AumentarPuntaje();
+        
         Destroy(gameObject);
-        Destroy(inst, 5);
+        Destroy(inst.gameObject, 5);
     }
 
     // Update is called once per frame
-    void Update()
+    // void Update()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.Escape))
+    //     {
+    //         CrearFrutaCortada();
+    //     } 
+    // }
+
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        Espada e = col.GetComponent<Espada>();
+
+        if (!e)
         {
-            CrearFrutaCortada();
-        } 
+            return;
+        }
+        
+        CrearFrutaCortada();
     }
 }
